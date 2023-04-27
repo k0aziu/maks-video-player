@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>UI</title>
+    <style>
+      * {
+        user-select: none;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 1.2rem;
+      }
+
+      body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #15202b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      
+      #kontroler {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        width: 80%;
+        height: 80vh;
+        margin: 0 auto;
+        background-color: #37474f;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+        max-width: 100%;
+        max-height: 100%;
+      }
+      
+      h1 {
+        text-align: center;
+        margin-top: 0;
+        color: #fff;
+        font-size: 2.5rem;
+      }
+      
+      label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+      
+      select {
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(255,255,255,0.2);
+        background-color: #455a64;
+        color: #fff;
+      }
+      
+      button {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        background-color: #1e88e5;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0px 0px 5px rgba(255,255,255,0.2);
+        transition: background-color 0.2s ease-in-out;
+      }
+      
+      button:hover {
+        background-color: #0d47a1;
+      }
+    </style>
+	<script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>UI</h1>
+        <label for="serial">Wybierz serial:</label>
+        <select id="serial" name="serial">
+          <option value="">Wybierz serial</option>
+          <option value="breaking-bad">Breaking Bad</option>
+          <option value="game-of-thrones">Gra o tron</option>
+          <option value="stranger-things">Stranger Things</option>
+        </select>
+        
+        <label for="sezon">Wybierz sezon:</label>
+        <select id="sezon" name="sezon">
+          <option value="">Wybierz sezon</option>
+          <option value="s01">Sezon 1</option>
+          <option value="s02">Sezon 2</option>
+          <option value="s03">Sezon 3</option>
+        </select>
+        
+        <label for="odcinek">Wybierz odcinek:</label>
+        <select id="odcinek" name="odcinek">
+          <option value="">Wybierz odcinek</option>
+          <option value="o01">Odcinek 1</option>
+          <option value="o02">Odcinek 2</option>
+          <option value="o03">Odcinek 3</option>
+          <option value="o04">Odcinek 4</option>
+          <option value="o05">Odcinek 5</option>
+        </select>
+      <div id="kontroler">
+        <button id="wstecz">15 sekund w tył</button>
+        <button id="playpause"></button>
+        <button id="naprzod">15 sekund w przód</button>
+      </div>
+      
+    </div>
+	<script src="data/ui-socket.js"></script>
+  </body>
+</html>
+
+         

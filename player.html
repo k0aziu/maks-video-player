@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title>Player</title>
+	<style>
+		* {
+			margin: 0;
+			box-sizing: border-box;
+			user-select: none;
+		}
+
+		body {
+			background-color: black;
+		}
+
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			width: 100vw;
+		}
+
+		video {
+			width: 100vw;
+			height: 100vh;
+		}
+	</style>
+	<script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<video id="player">
+			<source src="/downloads/current.mkv" type="video/mp4">
+		</video>
+
+	</div>
+	<script src="data/player-socket.js"></script>
+</body>
+
+</html>
